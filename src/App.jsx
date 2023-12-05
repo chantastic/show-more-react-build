@@ -6,7 +6,9 @@ function ShowLess({ children }) {
   return (
     <div>
       <div>{children}</div>
-      <button>Show {expanded ? 'less' : 'more'}</button>
+      <button onClick={() => alert(expanded)}>
+        Show {expanded ? 'less' : 'more'}
+      </button>
     </div>
   )
 }
