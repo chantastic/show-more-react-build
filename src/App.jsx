@@ -5,7 +5,15 @@ function ShowLess({ children }) {
 
   return (
     <div>
-      <div>{children}</div>
+      <div
+        style={{
+          maxHeight: '100px',
+          overflow: 'hidden',
+          transition: 'all .5s ease',
+        }}
+      >
+        {children}
+      </div>
       <button onClick={() => setExpanded(!expanded)}>
         Show {expanded ? 'less' : 'more'}
       </button>
