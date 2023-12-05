@@ -1,8 +1,12 @@
+import * as React from 'react'
+
 function ShowLess({ children }) {
+  let [expanded] = React.useState(true)
+
   return (
     <div>
       <div>{children}</div>
-      <button>Show {true ? 'less' : 'more'}</button>
+      <button>Show {expanded ? 'less' : 'more'}</button>
     </div>
   )
 }
