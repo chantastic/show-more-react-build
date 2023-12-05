@@ -7,7 +7,7 @@ function ShowLess({ children }) {
     <div>
       <div
         style={{
-          maxHeight: '100px',
+          maxHeight: expanded ? 'none' : '100px',
           overflow: 'hidden',
           transition: 'all .5s ease',
         }}
