@@ -2,7 +2,7 @@ function ShowLess({ children }) {
   return (
     <div>
       <div>{children}</div>
-      <button>Show Less</button>
+      <button>Show {true ? 'less' : 'more'}</button>
     </div>
   )
 }
