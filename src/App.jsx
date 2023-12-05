@@ -2,10 +2,13 @@ import * as React from 'react'
 
 function ShowLess({ children }) {
   let [expanded, setExpanded] = React.useState(true)
+  const contentRef = React.useRef(null)
+
 
   return (
     <div>
       <div
+        ref={contentRef}
         style={{
           maxHeight: expanded ? 'none' : '100px',
           overflow: 'hidden',
@@ -14,7 +17,12 @@ function ShowLess({ children }) {
       >
         {children}
       </div>
-      <button onClick={() => setExpanded(!expanded)}>
+      <button
+        onClick={() => {
+          setExpanded(!expanded)
+          alert(contentRef.current.scrollHeight)
+        }}
+      >
         Show {expanded ? 'less' : 'more'}
       </button>
     </div>
